@@ -1,8 +1,19 @@
 window.onload = function() {
+	var today = new Date();
+	var dd = today.getDate();
+	var hh = today.getHours();
+	if(hh < 17){
 	var clock = document.getElementById("clock")
-    , targetDate = new Date(2016, 08, 22, 17); // Jan 1, 2050;
- 
+    , targetDate = new Date(2016, 08, dd, 17); // Jan 1, 2050;
+	
   clock.innerHTML = countdown(targetDate).toString();
+	} else{
+		dd++;
+		var clock = document.getElementById("clock")
+    , targetDate = new Date(2016, 08, dd, 17); // Jan 1, 2050;
+	
+  clock.innerHTML = countdown(targetDate).toString();
+	}
   setInterval(function(){
     clock.innerHTML = countdown(targetDate).toString();
   }, 1000);
