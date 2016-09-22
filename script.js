@@ -1,6 +1,6 @@
 window.onload = function() {
 	var clock = document.getElementById("clock")
-    , targetDate = new Date(2016, 08, 21, 17); // Jan 1, 2050;
+    , targetDate = new Date(2016, 08, 22, 17); // Jan 1, 2050;
  
   clock.innerHTML = countdown(targetDate).toString();
   setInterval(function(){
