@@ -73,9 +73,6 @@ ul li {
     float: left;
 }
 
-li:lastchild{
-	border-right:none;
-}
 
 /* Change the link color on hover */
 li a:hover {
